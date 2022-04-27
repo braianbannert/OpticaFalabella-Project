@@ -1,1 +1,18 @@
-OpticaFalabella
+This file contains an explanation on what the application OpticaFalabella does. 
+
+This application was developed because a customer requested to have a program to manage their business. The business is about selling products such as eye contact lenses, sunglasses and more. They wanted to manage customer's information, sales, stock and more. 
+
+The program does the following. It has a main window from where the user is able to open a new window for a New Job, New Repair, insert information about the business (such as name of the branch office, address, telephone number, Facebook profile name, Instagram profile name, working hours in the week and more. 
+
+The program uses two different databases to manage everything. One of them (named in the folders of the application is "database.sqlite3", an SQL based database) and another one in the Cloud (Firebase of Google, Realtime Database). The first database is used to store all the information about customers (first name, last name, personal ID, telephone number, if its a cellphone or not and if it has WhatsApp enabled and more), information about stock of products, prices of the products, information about sellers and more. The second database is used to store information about the stock and could be requested the information any time needed, contains the prices of the products and all the information related to customers too. This was thought for the future opening of a new branch office. The information could be retrieved any time in any place and to be the same information to be shared by all the offices the business has. 
+
+The program is able too to send at the end of the day how much did the office sold, know one by one of the sales the information related to it, the amount paid, how much is going to be received when the customer comes to get the product finished, how much was the discount the office did to the customer, how much was sold by cash, debit card or credit card. This information is introduced into an Excel file for this purpose and sent to the accountant office for their review and see if the information provided is consistant to the information of the bank account. 
+
+By other side the program makes a PDF file. This file contains the information of what is needed to do related to the customer's requirement. This file also contains a QR Code which contains information about the order number generated and also the personal ID of the customer. This facilitates the searching over the databases to know the amount of money that is still needed to be paid by the customer for example. In the file we can see two separated parts. The first one which contains the information about the job to be done and the other one is for the customer. This second part is important when the customer comes again to the office to get the finished product. When the user scans the QR Code, the application searches in the database and discounts the items made by the workers in the stock section. 
+
+The office has right now two computers. To share the information between them was deployed an UDP client to send Broadcast messages over the network shared by them and to receive all the information mentioned before. 
+
+
+For making this program work is needed the following. The folder named OpticaFalabella contains another folder named Pictures. The folder "OpticaFalabella" is needed to be pasted into the main C drive as follows: "C:\\OpticaFalabella". The contain of the Pictures folder is used to manage the creation of the PDF files. For the creation of the file is also needed to enter into the "Insertar" button and then click on "Datos Optica". This part will store the information related to the branch office. 
+
+You can see the files mentioned before also pasted in the main folder of this project for your inspection. The Excel file name is "Ventas_27-04-22.xlsx". An example of the PDF files is "Trabajo_7.pdf"
